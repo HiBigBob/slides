@@ -1,0 +1,465 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>ReactJS</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<img width="160" class="png" data-src="http://www.troispointzero.fr/wp-content/uploads/2016/03/reactjs.png" >
+					<h1>React.JS</h1>
+					<h3>La librairie Javascript pour créer des interfaces utilisateurs</h3>
+					<p>
+						<small>Par Adrien Bouttier <a href="http://twitter.com/hibigbob">@hibigbob</a></small>
+					</p>
+				</section>
+				<section>
+					<h2>A propos</h2>
+					<img width="160" class="png-circle" data-src="https://avatars3.githubusercontent.com/u/4506493?v=3&u=ff18b7067d2f9572d7358e5dde96fea5e6a467ac&s=140" >
+					<p>
+						<small>Adrien Bouttier<a href="http://twitter.com/hibigbob">@hibigbob</a></small>
+					</p>
+					<p>
+						<small>Lead développeur chez Wanadev - Lyon</small>
+					</p>
+					<img width="260" class="png" data-src="https://www.wanadev.fr/images/logo-wanadev.png?20162705111359" >
+				</section>
+				<section>
+					<section>
+						<h2>Qu'est ce que React.js ?</h2>
+	        </section>
+
+					<section>
+						<h2>Une librairie : </h2>
+						<ul>
+							<li class="fragment">créé par Facebook</li>
+							<li class="fragment">avec une premier version en 2013</li>
+							<li class="fragment">qui permet de créer des interfaces utilisateurs</li>
+							<li class="fragment">qui gère que l'interface de l'application.</li>
+							<li class="fragment">qui est décrite comme la vue du modèle MVC.</li>
+							<li class="fragment">qui est connu pour être très performante.</li>
+						</ul>
+					</section>
+
+					<section>
+						Une librairie connu et reconnu par les clients
+					</section>
+				</section>
+
+				<section>
+					<h2>
+							Qui utilise React.JS ?
+					</h2>
+					<p style="background-color: #fff">
+							<img width="260" class="png" data-src="https://babeljs.io/images/users/facebook.png" >
+							<img width="260" class="png" data-src="http://www.main2market.com/wp-content/uploads/2016/04/Yahoo_3.png" >
+							<img width="220" height="60" class="png" data-src="http://vignette3.wikia.nocookie.net/logopedia/images/1/1f/Netflix.png" >
+							<img width="260" class="png" data-src="http://vignette3.wikia.nocookie.net/terminator/images/b/be/Sony_logo.png" >
+							<img width="260" class="png" data-src="https://upload.wikimedia.org/wikipedia/commons/9/95/Atlassian-rgb-navy-medium.png" >
+							<img width="260" class="png" data-src="https://s.w.org/about/images/logos/wordpress-logo-hoz-rgb.png" >
+							<img width="220" height="120" class="png" data-src="http://1.bp.blogspot.com/-4X7yNUBdtmc/Vd75GPS8D0I/AAAAAAAAFJE/q5GY7u9whVs/s1600/insta01.png" >
+							<img width="200" height="120" class="png" data-src="http://www.themoneytizer.com/blog/wp-content/uploads/2016/02/whatsapp-hero.jpg" >
+							<img width="260" height="150" class="png" data-src="https://a0.muscache.com/airbnb/static/about/resources/airbnb-logo-293-86cb5a9eea395a8233842fb74a5b59af.png" >
+							<img width="160" height="150" class="png" data-src="http://tech.m6web.fr/images/site-logo.png" >
+					</p>
+				</section>
+				<section>
+					<section>
+						<h2>
+								Comment fonctionne ReactJs ?
+						</h2>
+					</section>
+
+					<section>
+						<h2>
+							Reprenons la base
+						</h2>
+						<p class="fragment">
+							React est une librairie non un framework
+						</p>
+						<p class="fragment">
+							(Enfin du moins officiellement !)
+						</p>
+					</section>
+
+					<section>
+						<h2>
+							Qu'est ce qu'elle n'a pas ?
+						</h2>
+						<ul>
+							<li class="fragment">de "router"</li>
+							<li class="fragment">de "controller"</li>
+							<li class="fragment">de gestion des modèles</li>
+							<li class="fragment">de service</li>
+							<li class="fragment">d'injection de dépendance</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>
+							Quoi pas de router ?
+						</h2>
+						<p>
+							Oui officiellement, la librairie n'inclut pas de router, par contre la communauté a créé une librairie qui permet d'intégrer un router à React et elle marche très bien
+						</p>
+					</section>
+
+					<section>
+						<h2>
+							Mais qu'est ce qu'elle a ?
+						</h2>
+						<ul>
+							<li class="fragment">des composants</li>
+							<li class="fragment">des composants</li>
+							<li class="fragment">et encore des composants</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>
+							Avantages
+						</h2>
+						<p class="fragment">
+							Meilleurs maîtrise de l'application.
+						</p>
+						<p class="fragment">
+							Plus de liberté sur l'architecture.
+						</p>
+						<p class="fragment">
+							Pas besoin d'apprendre un framework, on utilise React dans une application js.
+						</p>
+						<p class="fragment">
+							Les performances
+						</p>
+					</section>
+
+					<section>
+						<h2>
+							Inconvénients
+						</h2>
+						<p class="fragment">
+							Temps de mise en place plus long.
+						</p>
+						<p class="fragment">
+							Pas de framework donc création manuellement.
+						</p>
+						<p class="fragment">
+							Besoin de mieux connaitre le language Javascript.
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>
+							Les fonctionnalité de ReactJs
+						</h2>
+					</section>
+
+					<section>
+						<h2>
+							ReactJs, c'est :
+						</h2>
+						<p class="fragment">
+							"Just the UI"
+						</p>
+						<p class="fragment">
+							"Virtual DOM"
+						</p>
+						<p class="fragment">
+							"Data flow"
+						</p>
+					</section>
+
+					<section>
+						<h2>
+							"Just the UI"
+						</h2>
+						<p class="fragment">
+							Donc une librairie légere
+						</p>
+						<p class="fragment">
+							Avec juste des composants
+						</p>
+						<p class="fragment">
+							Qui est intégrable sur des projets déjà existant ou framework.
+						</p>
+					</section>
+
+					<section>
+						<h2>
+							"Virtual dom"
+						</h2>
+						<img width="960" class="png" data-src="https://lh3.googleusercontent.com/WIqLMPlD_xoQ7hE9s5nGnH0A9SqZN0IwsVP7HPy1n4GxT2vZdquwQNUjTIKlWXHXxUPuly5lDYTDsj2Qmf1I1DwMs8OT2m_bTuUs3Aac3ELkewilXXCBLhHZeiP6XmRZViu3sDgLLUZFsrQKuB2Qpc-O4TrVwJ4_uIfnnU0sbkd2eqovRT064sMnuwvkTM9mh9eo_wnVVwzLp907igUEcrTCI_viNQ6Ykpe8RLaR1cnUAWjS1-ekJfv-snr-FDuCVIP0qELIMMg29YZ9BAZ9E04p8cV3qOR12ilv_I-0y9qS3LcsN9g5MDYM7_rNuk6_hkCXns4kt5IazH2lYBTz5eSxfK1CgJVBAppUGujq0DSXzP2l_Tfd5VQqabY4Ki-NUTip09X8YGP1tm803Sd-v7rigDKqUXxADJeM6gBfKEMmKY4E3RyRF6MVJ-7lDJogNip_d8Qtytg1ZDR0CWR6c7z0dDrE2mxNgyaOII5usRTaklB-5coQWgTnDE2nm8jJsAlo9HLNyUheGptyzXLiyDP7H5IiWhJ60vNRAUk3YP0=w800" >
+					</section>
+
+					<section>
+						<h2>
+							"Data flow"
+						</h2>
+						un patron de conception unidirectionnelle
+						<img width="660" class="png" data-src="http://image.slidesharecdn.com/redux-151020080756-lva1-app6892/95/redux-js-17-638.jpg" >
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>
+							Les composants
+						</h2>
+					</section>
+
+					<section>
+						<h2>
+							La structure d'une page
+						</h2>
+						<img width="660" class="png" data-src="http://maketea.co.uk/images/2014-03-05-robust-web-apps-with-react-part-1/wireframe_deconstructed.png" >
+					</section>
+
+					<section>
+						<h2>
+							On peut dire que les composants :
+						</h2>
+						<p class="fragment">
+							sont omniprésent
+						</p>
+						<p class="fragment">
+							sont réutilisable
+						</p>
+						<p class="fragment">
+							ne sont pas qu'un affichage, il possède des données pouvant changer dans le temps. On peut faire changer des données uniquement dans un composant.
+						</p>
+					</section>
+
+					<section>
+						<h2>
+							Les notiions importantes d'un composant
+						</h2>
+					</section>
+
+					<section>
+						<h2>
+							Les "Props"
+						</h2>
+						<p class="fragment">
+							Ce sont les paramètres du composant
+						</p>
+						<p class="fragment">
+							Ca peut être une action a exécuté dans le composant ou une données
+						</p>
+					</section>
+
+					<section>
+						<h2>
+							Le state
+						</h2>
+						<p class="fragment">
+							L'état initiale du composant
+						</p>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							## JSX
+
+							Un pré-processeur js qui permet d'écrire les templates avec une syntaxe xml.
+
+							```
+								var Nav;
+								// Input (JSX):
+								var app = <Nav color="blue" />;
+								// Output (JS):
+								var app = React.createElement(Nav, {color:"blue"});
+							```
+						</script>
+					</section>
+
+					<section>
+						<h2>
+							Cycle de vie d'un composant
+						</h2>
+						<img width="360" class="png" data-src="https://pbs.twimg.com/media/CMwGfDdU8AA5VbX.png" >
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							## Créons un composant React
+
+							```
+							var View = React.createClass({
+								getInitialState : function(){
+									// état initial
+									return { checked : false }
+								},
+								getDefaultProps : function(){
+									// si `this.props.label` n'est pas présent, ce sera `"?"`
+									return { label : "?" }
+								},
+								toggle : function(){
+									// on crée un nouvel état et on déclenche le render
+									this.setState({
+										checked : !this.state.checked
+									})
+								},
+								render : function(){
+									var classes = this.state.checked ? "list-item--valid" : "list-item";
+									return (
+										<div className={classes}>
+											<input checked={this.state.checked} type="checkbox" onChange={this.toggle} />
+											{this.props.label}
+										</div>
+									)
+								}
+							})
+
+							// on mount le component, et l'on passe le label
+							React.render(<View label="helloworld" />, document.getElementById("app"))
+
+							```
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>
+							Referencement avec Reactjs
+						</h2>
+					</section>
+
+					<section>
+						<h2>
+							Isomorphisme ou serveur-side rendering
+						</h2>
+						<p>
+							Les composants React peuvent être rendus simplement côté serveur.
+						</p>
+						<img width="360" class="png" data-src="http://maketea.co.uk/images/2014-06-30-robust-web-apps-with-react-part-4/isomorphic_code_share.png" >
+					</section>
+
+					<section>
+						<h2>
+							Avantages
+						</h2>
+						<p class="fragment">
+							Le composant est déjà chargé en arrivant sur le navigateur
+						</p>
+						<p class="fragment">
+							Le googlebot peut donc crawler la page et la référencer
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>
+							React n'est pas la solution à tous
+						</h2>
+					</section>
+
+					<section>
+						<h2>
+							Pourquoi ?
+						</h2>
+						<p>
+							Pourquoi <b style="color:#42affa !important;">VEVO</b>, <b style="color:#42affa !important;">MSN</b> et <b style="color:#42affa !important;">GOOGLE</b> utilisent <b style="color:rgb(24, 164, 177) !important;">Angular</b> ?
+						</p>
+						<p>
+							Pourquoi <b style="color:#42affa !important;">REDDIT</b> et <b style="color:#42affa !important;">PINTEREST</b> ont choisi <b style="color:rgb(24, 164, 177) !important;">Backbone</b> ?
+						</p>
+						<p>
+							Pourquoi <b style="color:#42affa !important;">Linkedin</b>, <b style="color:#42affa !important;">Netflix</b>, <b style="color:#42affa !important;">Twitch</b> et <b style="color:#42affa !important;">Captaintrain</b> utilisent <b style="color:rgb(24, 164, 177) !important;">Ember</b> ?
+						</p>
+						<p>
+							Pourquoi les boites chinoises (<b style="color:#42affa !important;">Alibaba</b>, <b style="color:#42affa !important;">Baidu</b>, <b style="color:#42affa !important;">Xiaomi</b>) ont choisi <b style="color:rgb(24, 164, 177) !important;">VueJS</b>
+						</p>
+					</section>
+
+					<section>
+						<p class="fragment">
+							Déjà, parce que ReactJs est une librairie et non un framework.
+						</p>
+						<p class="fragment">
+							Ils ont chacun leurs points fort et leurs points faible.
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>
+						Avis personnel
+					</h2>
+					<h2 class="fragment">
+						Déjà testé
+					</h2>
+					<h3 class="fragment">
+						EmberJs
+					</h3>
+					<p class="fragment">
+						J'aime beaucoup l'abstraction qu'il offre
+					</p>
+					<h2 class="fragment">
+						A tester
+					</h2>
+					<h3 class="fragment">
+						VueJs
+					</h3>
+					<p class="fragment">
+						Je vous dirai ça
+					</p>
+				</section>
+
+				<section>
+					<img width="660" class="png" data-src="https://media.giphy.com/media/26FPOogenQv5eOZHO/giphy.gif" >
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+	</body>
+</html>
